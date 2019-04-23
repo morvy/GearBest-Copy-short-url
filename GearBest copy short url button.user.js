@@ -3,7 +3,7 @@
 // @namespace    https://openuserjs.org/users/moped
 // @license      GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
 // @version      1.0.0
-// @description  Adds a copy short url button to AliExpress item page. Copies a nice link instead of a long one.
+// @description  Adds a copy short url button to GearBest item page. Copies a nice link instead of a long one.
 // @author       moped
 // @copyright    Apr 23, 2019, moped
 // @include      *://www.gearbest.com/*.html*
@@ -23,10 +23,10 @@ var copyButton = '<a rel="nofollow" href="javascript: void(0);" ' +
 				'&nbsp Copy URL</a>';
 
 function tryShortUrl(url) {
-  var newUrl = url;
-  newUrl = newUrl.replace(/.*(pp_[0-9_]+\.html).*/, "$1");
+	var newUrl = url;
+	newUrl = newUrl.replace(/.*(pp_[0-9_]+\.html).*/, "$1");
 
-  return newUrl;
+	return newUrl;
 }
 
 GM_addStyle('\
@@ -39,7 +39,7 @@ GM_addStyle('\
 document.querySelector('.goodsIntro_collect').insertAdjacentHTML('beforeend', copyButton);
 
 document.querySelector('#copy-url').addEventListener('click', function(event) {
-  GM_setClipboard('https://www.gearbest.com/' + tryShortUrl(document.URL), 'text');
-  this.classList.add("copy-ok");
-  event.preventDefault();
+	GM_setClipboard('https://www.gearbest.com/' + tryShortUrl(document.URL), 'text');
+	this.classList.add("copy-ok");
+	event.preventDefault();
 });
