@@ -2,7 +2,7 @@
 // @name         GearBest copy short url button
 // @namespace    https://openuserjs.org/users/moped
 // @license      GPL-3.0-or-later; http://www.gnu.org/licenses/gpl-3.0.txt
-// @version      1.0.0
+// @version      1.0.1
 // @description  Adds a copy short url button to GearBest item page. Copies a nice link instead of a long one.
 // @author       moped
 // @copyright    Apr 23, 2019, moped
@@ -24,7 +24,7 @@ var copyButton = '<a rel="nofollow" href="javascript: void(0);" ' +
 
 function tryShortUrl(url) {
 	var newUrl = url;
-	newUrl = newUrl.replace(/.*(pp_[0-9_]+\.html).*/, "$1");
+	newUrl = newUrl.replace(/.*(pp_[0-9_]+\.html).*(\?wid=[0-9]+).*/, "$1$2");
 
 	return newUrl;
 }
