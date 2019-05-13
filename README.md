@@ -5,6 +5,9 @@ This userscript requires [Tampermonkey](https://tampermonkey.net) extension to w
 
 ## Changelog
 
+### 1.0.1
+- fixed appending of warehouse ID which is required in url
+
 ### 1.0.0
 - initial release
 - Public @ https://openuserjs.org/scripts/moped/GearBest_copy_short_url_button
