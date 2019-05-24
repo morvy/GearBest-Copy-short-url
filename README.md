@@ -5,6 +5,10 @@ This userscript requires [Tampermonkey](https://tampermonkey.net) extension to w
 
 ## Changelog
 
+### 1.1.0
+- now uses canonical url as primary to prevent 404 urls
+- if canonical url is not available, uses old method of parsing address bar url
+
 ### 1.0.1
 - fixed appending of warehouse ID which is required in url
 
